@@ -25,6 +25,8 @@ jobs:
         python-version: "3.12"
     - name: wake up docker-compose
       run: docker compose up --build -d
+    - name: run docker
+      run: docker run -d Dockerfile-1
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
